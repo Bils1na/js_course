@@ -117,7 +117,8 @@
 //     return result;
 // }
 
-const product = "apple";
+// const product = "apple";
+// const appleCount = 10;
 // const applePrice = getProductPrice(product);
 
 // const superProduct = "banan";
@@ -125,28 +126,69 @@ const product = "apple";
 
 // const mangoPrice = getProductPrice("mango");
 
-const applePrice = getProductPrice();
+// const applePrice = getProductPriceByCount(product, appleCount);
 
-function getProductPrice(str) {
-    switch(str) {
-        case "banan":
-            return 50;
-        case "mango":
-            return 80;
-        case "apple":
-        case "pear":
-            return 40;
-        default:
-            return NaN;
-    }
-}
+// function getProductPrice(str) {
+//     switch(str) {
+//         case "banan":
+//             return 50;
+//         case "mango":
+//             return 80;
+//         case "apple":
+//         case "pear":
+//             return 40;
+//         default:
+//             return NaN;
+//     }
+// }
 
-function getProductPriceByCount(productName, count) {
-    const price = getProductPrice(productName);
-    const result = price * count;
-    return result;
-}
+// function getProductPriceByCount(productName, count) {
+//     const price = getProductPrice(productName);
+//     const result = price * count;
+//     return result;
+// }
 
-console.log(`Apple price ${applePrice}`);
-console.log(`Mango price ${mangoPrice}`);
-alert(`Banan price ${bananPrice}`);
+// console.log(`Apple price for 10 kilogram = ${applePrice}`);
+// console.log(`Mango price ${mangoPrice}`);
+// alert(`Banan price ${bananPrice}`);
+
+// const name = "artem";
+// const age = 26;
+
+// function $_newName() {
+
+// }
+
+// fn();
+
+// function fn() {
+
+// }
+
+// fn();
+
+// const fn2 = function () {
+
+// };
+
+// fn2();
+
+// const fn = () => console.log(123);
+// fn();
+
+// function fn(a, b, c) {
+//     console.log(arguments);
+// }
+// fn(5, "10"); // 5 10 undefined
+
+// && - and; || - or
+// if (a > b && c === 10) {
+//     // ...
+// }
+
+// if (a > b || c === 10) {
+//     // ...
+// }
+
+
+
