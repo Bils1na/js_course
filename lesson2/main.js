@@ -190,5 +190,64 @@
 //     // ...
 // }
 
+// function fn(a) {
+//     a = a ?? 100;
+//     console.log(a);
+// }
+
+// function fn(a = 100) {
+//     console.log(a);
+// }
+
+// fn(50); // 50
+// fn(0); // 0
+// fn(); // 100
+
+// function isPositive(num) {  1
+//     if (num > 0) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// function isPositive(num) {  2
+//     if (num > 0) {
+//         return true;
+//     }
+//     return false; 
+// }
+
+// function isPositive(num) {  3
+//     return num > 0 ? true : false;
+// }
+
+// function isPositive(num) { //  4
+//     return num > 0;
+// }
+
+// console.log(isPositive(50)); // true
+// console.log(isPositive(-50)); // false
+
+
+// const age = Number(prompt("Enter your age: "));
+// if (age < 18) { 
+//     alert("It's your sale 10%");
+// } else if (age >= 18 && age < 60) {
+//     alert("It's your sale 20%");
+// } else if (age >= 60) {
+//     alert("It's your sale 30%");
+// } else {
+//     alert("This age does not exist");
+// }
+
+// alert(age < 18 
+//         ? "It's your sale 10%" 
+//         : age >= 18 && age < 60 
+//                 ? "It's your sale 20%" 
+//                 : age >= 60 
+//                     ? "It's your sale 30%" 
+//                     : "This age does not exist"
+// );
 
 
