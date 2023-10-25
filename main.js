@@ -50,12 +50,69 @@ const product = "apple";
 //     }
 // }
 
-if (product === "banan") {
-    console.log("Banan is 50 rubles for kilogram");
-} else if (product === "mango") { 
-    console.log("Mango is 80 rubles for kilogram");
-} else if (product === "apple" || product === "pear") {
-    console.log("Apple or pear is 60 rubles for kilogram");
-} else {
-    console.log("This is unknown fruit.")
+// if (product === "banan") {
+//     console.log("Banan is 50 rubles for kilogram");
+// } else if (product === "mango") { 
+//     console.log("Mango is 80 rubles for kilogram");
+// } else if (product === "apple" || product === "pear") {
+//     console.log("Apple or pear is 60 rubles for kilogram");
+// } else {
+//     console.log("This is unknown fruit.");
+// }
+
+switch(product) {
+    case "banan":
+        console.log("Banan is 50 rubles for kilogram");
+        break;
+    case "mango":
+        console.log("Mango is 80 rubles for kilogram");
+        break;
+    case "apple":
+    case "pear":
+        console.log("Apple or pear is 60 rubles for kilogram");
+        break;
+    default:
+        console.log("This is unknown fruit.");
+} // DRY Don't reapet yourself
+
+// switch(true) {
+//     case num === 1:
+//         console.log("num = 1");
+//         break;
+//     case num > 1 && num < 5:
+//         console.log("num is around [2, 4]");
+//         break;
+//     case num >= 5:
+//         console.log("num >= 5");
+//         break;
+//     default:
+//         console.log("Invalid number");
+// } 
+
+alert();
+prompt();
+console.log(); // functions
+
+sayPrice();
+sayPrice();
+
+
+function sayPrice() {
+    console.log("Banan is 50 rubles");
+    console.log("Banan is 50 rubles");
+    console.log("Banan is 50 rubles");
+    console.log("Banan is 50 rubles");
+    console.log("Banan is 50 rubles");
+    console.log("Banan is 50 rubles");
+}
+
+const name = prompt("Enter name: ");
+
+const price = getPrice();
+console.log(`Price: ${price}`);
+
+
+function getPrice() {
+    const result = 25 + 25;
+    return result;
 }
