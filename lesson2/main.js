@@ -118,21 +118,35 @@
 // }
 
 const product = "apple";
-sayPrice();
+// const applePrice = getProductPrice(product);
 
-function sayPrice() {
-    switch(product) {
+// const superProduct = "banan";
+// const bananPrice = getProductPrice(superProduct);
+
+// const mangoPrice = getProductPrice("mango");
+
+const applePrice = getProductPrice();
+
+function getProductPrice(str) {
+    switch(str) {
         case "banan":
-            console.log("Banan is 50 rubles for kilogram");
-            break;
+            return 50;
         case "mango":
-            console.log("Mango is 80 rubles for kilogram");
-            break;
+            return 80;
         case "apple":
         case "pear":
-            console.log("Apple or pear is 60 rubles for kilogram");
-            break;
+            return 40;
         default:
-            console.log("This is unknown fruit.");
+            return NaN;
     }
 }
+
+function getProductPriceByCount(productName, count) {
+    const price = getProductPrice(productName);
+    const result = price * count;
+    return result;
+}
+
+console.log(`Apple price ${applePrice}`);
+console.log(`Mango price ${mangoPrice}`);
+alert(`Banan price ${bananPrice}`);
