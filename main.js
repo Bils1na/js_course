@@ -10,3 +10,14 @@ String(2) !== "2"; // false
 
 const a = 5;
 Boolean(a); //true
+
+
+const goodsCount = 100;
+
+if (goodsCount > 0) {
+    console.log(`You have ${goodsCount}.`);
+} else {
+    console.log("You don't have anything.");
+}
+
+
