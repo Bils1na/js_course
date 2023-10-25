@@ -34,7 +34,7 @@
 // );
 
 
-const product = "apple";
+// const product = "apple";
 
 // if (product === "banan") {
 //     console.log("Banan is 50 rubles for kilogram");
@@ -60,20 +60,20 @@ const product = "apple";
 //     console.log("This is unknown fruit.");
 // }
 
-switch(product) {
-    case "banan":
-        console.log("Banan is 50 rubles for kilogram");
-        break;
-    case "mango":
-        console.log("Mango is 80 rubles for kilogram");
-        break;
-    case "apple":
-    case "pear":
-        console.log("Apple or pear is 60 rubles for kilogram");
-        break;
-    default:
-        console.log("This is unknown fruit.");
-} // DRY Don't reapet yourself
+// switch(product) {
+//     case "banan":
+//         console.log("Banan is 50 rubles for kilogram");
+//         break;
+//     case "mango":
+//         console.log("Mango is 80 rubles for kilogram");
+//         break;
+//     case "apple":
+//     case "pear":
+//         console.log("Apple or pear is 60 rubles for kilogram");
+//         break;
+//     default:
+//         console.log("This is unknown fruit.");
+// } // DRY Don't reapet yourself
 
 // switch(true) {
 //     case num === 1:
@@ -89,30 +89,50 @@ switch(product) {
 //         console.log("Invalid number");
 // } 
 
-alert();
-prompt();
-console.log(); // functions
+// alert();
+// prompt();
+// console.log(); // functions
 
-sayPrice();
-sayPrice();
+// sayPrice();
+// sayPrice();
 
+
+// function sayPrice() {
+//     console.log("Banan is 50 rubles");
+//     console.log("Banan is 50 rubles");
+//     console.log("Banan is 50 rubles");
+//     console.log("Banan is 50 rubles");
+//     console.log("Banan is 50 rubles");
+//     console.log("Banan is 50 rubles");
+// }
+
+// const name = prompt("Enter name: ");
+
+// const price = getPrice();
+// console.log(`Price: ${price}`);
+
+
+// function getPrice() {
+//     const result = 25 + 25;
+//     return result;
+// }
+
+const product = "apple";
+sayPrice();
 
 function sayPrice() {
-    console.log("Banan is 50 rubles");
-    console.log("Banan is 50 rubles");
-    console.log("Banan is 50 rubles");
-    console.log("Banan is 50 rubles");
-    console.log("Banan is 50 rubles");
-    console.log("Banan is 50 rubles");
-}
-
-const name = prompt("Enter name: ");
-
-const price = getPrice();
-console.log(`Price: ${price}`);
-
-
-function getPrice() {
-    const result = 25 + 25;
-    return result;
+    switch(product) {
+        case "banan":
+            console.log("Banan is 50 rubles for kilogram");
+            break;
+        case "mango":
+            console.log("Mango is 80 rubles for kilogram");
+            break;
+        case "apple":
+        case "pear":
+            console.log("Apple or pear is 60 rubles for kilogram");
+            break;
+        default:
+            console.log("This is unknown fruit.");
+    }
 }
