@@ -17,5 +17,15 @@
 "use strict";
 
 function declinationOfNumber(num, first, second, third) {
-    
+    if (num % 10 === 1 && num !== 11) {
+        return `${num} ${first}`;
+    } else if (!(num > 11 && num < 15) && (num % 10 > 1 && num % 10 < 5)) { 
+        return `${num} ${second}`;
+    } else {
+        return `${num} ${third}`;
+    }
 }
+
+console.log(declinationOfNumber(1, "яблоко", "яблока", "яблок")); // "яблоко"
+console.log(declinationOfNumber(2, "мяч", "мяча", "мячей")); // "мяча"
+console.log(declinationOfNumber(5, "стул", "стула", "стульев")); // "стульев"
