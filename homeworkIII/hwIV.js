@@ -35,9 +35,16 @@ const products = [
     },
 ];
 
-for (const key in products) {
-    if (typeof products[key].photos !== "undefined" 
-    && products[key].photos.length !== 0) {
-        console.log(products[key].photos);
-    }
-}
+// for (const key in products) {
+//     if (typeof products[key].photos !== "undefined" 
+//     && products[key].photos.length !== 0) {
+//         console.log(products[key].photos);
+//     }
+// }
+
+const photos = products.filter(product => product.photos 
+    && product.photos.length > 0);
+console.log(photos);
+
+const sortProducts = products.sort((a, b) => a.price - b.price);
+console.log(sortProducts);
