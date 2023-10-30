@@ -46,6 +46,10 @@
 // myCar.beep();
 // myCar2.beep();
 
+function toBeep() {
+    console.log(`${this.model}: Beep!`);
+}
+
 function Car(model) {
     // this = {};
     // this.__proto__ = Car.prototype;
