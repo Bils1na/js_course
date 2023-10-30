@@ -22,4 +22,27 @@
 
 "use strict";
 
+/**
+ * 
+ * @param {number} number - положительное целое число от 0 до 1000
+ * @returns {Object}
+ */
+function getDigitsOfNumber(number) {
+    const obj = {};
+    if (number > 0 && number < 1000 && Number.isInteger(number)) {
+        obj.units = number % 10, 
+        obj.dozens =  Math.floor(number / 10) % 10,
+        obj.hundreds = Math.floor(number / 100) % 10;
+        return obj;
+    } else {
+        console.error("Input is not in the correct format.")
+        return obj;
+    }
+}
 
+console.log(getDigitsOfNumber(523));
+console.log(getDigitsOfNumber(523.54));
+console.log(getDigitsOfNumber(1203));
+console.log(getDigitsOfNumber("123"));
+console.log(getDigitsOfNumber("asd"));
+console.log(getDigitsOfNumber(765));

@@ -98,10 +98,9 @@ const postES6 = new PostES6("John", "Hello world!");
 console.log(postES6);
 
 
-
 class AttachedPostES6 extends PostES6 {
-    constructor() {
-        super(name, text);
+    constructor(author, text) {
+        super(author, text);
         this.highlighted = false;
     }
 
@@ -109,3 +108,6 @@ class AttachedPostES6 extends PostES6 {
         this.highlighted = true;
     }
 }
+
+const attachedPostES6 = new AttachedPostES6("Henry", "Hello world!");
+console.log(attachedPostES6);
