@@ -24,3 +24,26 @@
 
 // console.log(getComputedStyle(pTag));
 
+// function sayHello() {
+//     alert(123);
+// }
+
+const btnEl = document.querySelector("button");
+// btnEl.onclick = function () {
+//     alert("Hello");
+// }
+
+// btnEl.onclick = function () {
+//     alert("Bye");
+// }
+
+// btnEl.onclick = null;
+
+btnEl.addEventListener("click", () => {
+    console.log(123);
+});
+
+btnEl.addEventListener("click", () => {
+    console.log("!!!");
+});
+
