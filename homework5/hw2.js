@@ -36,3 +36,26 @@ const menuEl = document.querySelector(".menu").classList.remove("dropdown-menu")
 
 document.querySelector("div.dropdown")
         .insertAdjacentHTML("afterend", "<a href=\"#\">link</a>");
+
+/*
+5. У элемента с id "dropdownMenuButton" замените id на "superDropdown".
+*/
+
+
+  /*
+  6. Добавьте атрибут data-dd со значением 3 элементу у которого существует
+  атрибут "aria-labelledby" равный "dropdownMenuButton" используя dataset.
+   */
+
+
+  /*
+  7. Удалите атрибут type у элемента с классом "dropdown-toggle".
+   */
+
+
+  /*
+  8. Выведите в консоль все имеющиеся атрибуты и их значения тега у которого
+  есть все два класса btn и dropdown-toggle.
+  Вывод каждого атрибута и значений должен выглядеть следующим образом (пример):
+  Атрибут "class" содержит значение "btn btn-secondary dropdown-toggle"
+   */
