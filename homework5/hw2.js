@@ -41,16 +41,24 @@ document.querySelector("div.dropdown")
 5. У элемента с id "dropdownMenuButton" замените id на "superDropdown".
 */
 
+const el = document.querySelector("[id=\"dropdownMenuButton\"]").id = "superDropdown";
+
 
   /*
   6. Добавьте атрибут data-dd со значением 3 элементу у которого существует
   атрибут "aria-labelledby" равный "dropdownMenuButton" используя dataset.
    */
 
+const el1 = document.querySelector("[aria-labelledby=\"dropdownMenuButton\"");
+el1.dataset.dd = 3;
+
 
   /*
   7. Удалите атрибут type у элемента с классом "dropdown-toggle".
    */
+
+const el2 = document.querySelector(".dropdown-toggle");
+el2.removeAttribute("type");
 
 
   /*
@@ -59,3 +67,10 @@ document.querySelector("div.dropdown")
   Вывод каждого атрибута и значений должен выглядеть следующим образом (пример):
   Атрибут "class" содержит значение "btn btn-secondary dropdown-toggle"
    */
+
+const el3 = document.querySelector(".btn.dropdown-toggle").attributes;
+for (const element of el3) {
+  console.log(`
+  ${element.name} - ${element.value}
+  `);
+}
