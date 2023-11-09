@@ -7,6 +7,8 @@ function Slider(selector, width, height) {
   if (!this.sliderEl) {
     throw new TypeError(`Wrong slider selector`);
   }
+  this.slides = document.querySelectorAll('.slider-item');
+  this.slideIdx = 0;
 }
 
 Slider.prototype.init = function () {
@@ -29,8 +31,8 @@ Slider.prototype.init = function () {
   this.rightArrow.classList.add('fas', 'fa-chevron-circle-right', 'slider-rightArrow');
   this.sliderEl.append(this.rightArrow);
 
-  this.slides = document.querySelectorAll('.slider-item');
-  this.slideIdx = 0;
+  // this.slides = document.querySelectorAll('.slider-item');
+  // this.slideIdx = 0;
 
   // Ждем когда загрузится весь контент
   window.addEventListener('load', () => {
