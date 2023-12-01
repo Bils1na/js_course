@@ -90,23 +90,39 @@
 
 // fn(...arr1);
 
-const arr1 = [1, 5, 6];
-// const a = arr1[0];
-// const b = arr1[1];
+// const arr1 = [1, 5, 6];
+// // const a = arr1[0];
+// // const b = arr1[1];
 
-const[a,, b] = arr1;
-console.log(a, b); // 1 6
+// const[a,, b] = arr1;
+// console.log(a, b); // 1 6
 
-const obj1 = { a: 5, b: 6, c: 10 };
-const { a, c } = obj1;
-console.log(a, c) // 5 10
+// const obj1 = { a: 5, b: 6, c: 10 };
+// const { a, c } = obj1;
+// console.log(a, c) // 5 10
 
-let a = 5;
-let b = 10;
-[a, b] = [b, a];
+// let a = 5;
+// let b = 10;
+// [a, b] = [b, a];
 
-function fn({a, c: cParam = 100}) {
-    console.log(a, cParam);
-}
+// function fn({a, c: cParam = 100}) {
+//     console.log(a, cParam);
+// }
 
-fn(obj1); // 5 10
+// fn(obj1); // 5 10
+
+// document.querySelector("button").addEventListener("click", ({target}) => {
+//     console.log(target.textContent);
+// });
+
+const btnEl = document.querySelector("button");
+const a = 56;
+
+const handler = (val) => (event) => {
+    console.log(val);
+};
+
+const clickHandler = handler(a);
+
+btnEl.addEventListener("click", clickHandler);
+btnEl.removeEventListener("click", clickHandler);
