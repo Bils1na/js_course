@@ -18,6 +18,7 @@ dropContainer.addEventListener("dragover", event => {
     event.preventDefault();
 });
 
-dropContainer.addEventListener("drop", event => {
-    
+dropContainer.addEventListener("drop", () => {
+    const draggedEl = document.querySelector(".dragged");
+    dropContainer.append(draggedEl);
 });
