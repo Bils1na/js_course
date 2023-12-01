@@ -48,7 +48,7 @@ class Board {
      * @returns {HTMLTableCellElementment}
      */
     getCellEl(x, y) {
-        return this.boardEl.querySelector
+        return this.boardEl.querySelector(`tr:nth-child(${y}) td:nth-child(${x})`);
     }
 
     /**
