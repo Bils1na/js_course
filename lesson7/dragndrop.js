@@ -10,3 +10,14 @@ dragContainer.addEventListener("dragstart", event => {
     event.target.classList.add("dragged");
 });
 
+dragContainer.addEventListener("dragend", event => {
+    event.target.classList.remove("dragged");
+});
+
+dropContainer.addEventListener("dragover", event => {
+    event.preventDefault();
+});
+
+dropContainer.addEventListener("drop", event => {
+    
+});
