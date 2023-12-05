@@ -18,6 +18,13 @@ class Food {
     }
 
     /**
+     * This method set new food 
+     */
+    setFood() {
+        this.board.renderFood(this);
+    }
+
+    /**
      * setter
      */
     setNewFood() {

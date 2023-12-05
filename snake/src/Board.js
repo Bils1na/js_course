@@ -43,6 +43,16 @@ class Board {
     }
 
     /**
+     * This method cleans the game board
+     */
+    clearBoard() {
+        const tdElems = document.querySelectorAll('td');
+        tdElems.forEach(function(td) {
+            td.className = "";
+        });
+    }
+
+    /**
      * @param {number} x -
      * @param {number} y - 
      * @returns {HTMLTableCellElementment}

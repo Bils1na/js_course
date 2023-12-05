@@ -25,20 +25,56 @@ class Game {
 
     run() {
         this.menu.addButtonsClickListneres(this.start.bind(this), this.pause.bind(this));
-        // document.addEventListener("keydown", this.pressKeyHandler.bind(this));
+        document.addEventListener("keydown", this.pressKeyHandler.bind(this));
     }
 
     /**
      * start
      */
     start() {
-        console.log("start");
+        if (this.status.isPaused()) {
+            this.status.setPlaying();
+            this.tickIdentifier = setInterval(this.doTick.bind(this), 1000 / this.settings.speed);
+        }
     }
 
     /**
      * pause
      */
     pause() {
-        console.log("pause");
+        if (this.status.isPlaying()) {
+            this.status.setPaused();
+            clearInterval(this.tickIdentifier);
+        }
+    }
+
+    /**
+     * 1. Перемещение змейки
+     * 2. проверка на окончание игры
+     * 3. увелечение размера змейки после поедания еды
+     * 4. заново отрисовывает положение змейки и еды
+     */
+    doTick() {
+        this.snake.performStep();
+        this.board.clearBoard();
+        this.food.setFood();
+        this.board.renderSnake();
+    }
+
+    pressKeyHandler(event) {
+        switch(event.key) {
+            case "ArrowUp":
+                this.snake.changeDirection("up");
+                break;
+            case "ArrowDown":
+                this.snake.changeDirection("down");
+                break;
+            case "ArrowLeft":
+                this.snake.changeDirection("left");
+                break;
+            case "ArrowRight":
+                this.snake.changeDirection("right");
+                break;
+        }
     }
 }
