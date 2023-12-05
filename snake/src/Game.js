@@ -59,6 +59,9 @@ class Game {
         if (this.isGameLost()) {
             return;
         }
+        if (this.isGameWon()) {
+            return;
+        }
         if (this.board.isHeadOnFood()) {
             this.snake.increaseBody();
             this.food.setNewFood();
@@ -83,6 +86,19 @@ class Game {
 
     /**
      * 
+     * @returns {boolean}
+     */
+    isGameWon() {
+        if (this.snake.body.length === this.settings.winLength) {
+            clearInterval(this.tickIdentifier);
+            this.setMessage("Won");
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * 
      * @param {string} event 
      */
     pressKeyHandler(event) {
@@ -100,5 +116,13 @@ class Game {
                 this.snake.changeDirection("right");
                 break;
         }
+    }
+
+    /**
+     * 
+     * @param {string} text 
+     */
+    setMessage(text) {
+        this.messageEl.innerText = text;
     }
 }
