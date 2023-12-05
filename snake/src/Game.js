@@ -24,7 +24,7 @@ class Game {
     }
 
     run() {
-        this.menu.addButtonClickListneres(this.start, this.pause);
+        this.menu.addButtonsClickListneres(this.start.bind(this), this.pause.bind(this));
         // document.addEventListener("keydown", this.pressKeyHandler.bind(this));
     }
 
@@ -32,6 +32,13 @@ class Game {
      * start
      */
     start() {
-        
+        console.log("start");
+    }
+
+    /**
+     * pause
+     */
+    pause() {
+        console.log("pause");
     }
 }
