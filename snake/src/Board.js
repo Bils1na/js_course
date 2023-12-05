@@ -77,4 +77,23 @@ class Board {
         return null;
     }
 
+    /**
+     * This method works when snake is eating food
+     * @returns {boolean} true or false
+     */
+    isHeadOnFood() {
+        return this.boardEl.querySelector(".food").classList.contains("snakeBody");
+    }
+
+    /**
+     * 
+     * @param {Object} nextCellCoords 
+     * @param {number} nextCellCoords.x 
+     * @param {number} nextCellCoords.y
+     * @returns {boolean} 
+     */
+    isNextStepToWall(nextCellCoords) {
+        let nextCell = this.getCellEl(nextCellCoords.x, nextCellCoords.y);
+        return nextCell === null;
+    }
 }

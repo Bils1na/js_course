@@ -56,11 +56,35 @@ class Game {
      */
     doTick() {
         this.snake.performStep();
+        if (this.isGameLost()) {
+            return;
+        }
+        if (this.board.isHeadOnFood()) {
+            this.snake.increaseBody();
+            this.food.setNewFood();
+        }
         this.board.clearBoard();
         this.food.setFood();
         this.board.renderSnake();
     }
 
+    /**
+     * This method checks game end
+     * @returns {boolean}
+     */
+    isGameLost() {
+        if (this.board.isNextStepToWall(this.xnake.body[0])) {
+            clearInterval(this.tickIdentifier);
+            this.setMessage("Game over");
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * 
+     * @param {string} event 
+     */
     pressKeyHandler(event) {
         switch(event.key) {
             case "ArrowUp":
